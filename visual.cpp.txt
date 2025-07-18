@@ -1,0 +1,129 @@
+#include <iostream>
+#include "pioche.h"
+#include "total.h"
+#include "jeu.h"
+#include "proposition.h"
+#include <SFML/Graphics.hpp>
+#include "visual.h"
+
+
+
+void visual::setvisualProposition_() {
+    sf::RectangleShape cartep1;
+    cartep1.setSize(sf::Vector2f(142, 192)); // Taille du rectangle
+    cartep1.setPosition(505, 400); // Position du rectangle
+    cartep1.setFillColor(sf::Color::White); // Couleur du rectangle
+
+    sf::RectangleShape cartep2;
+    cartep2.setSize(sf::Vector2f(142, 192)); // Taille du rectangle
+    cartep2.setPosition(697, 400); // Position du rectangle
+    cartep2.setFillColor(sf::Color::White); // Couleur du rectangle
+
+    sf::RectangleShape cartep3;
+    cartep3.setSize(sf::Vector2f(142, 192)); // Taille du rectangle
+    cartep3.setPosition(889, 400); // Position du rectangle
+    cartep3.setFillColor(sf::Color::White); // Couleur du rectangle
+
+    sf::RectangleShape cartep4;
+    cartep4.setSize(sf::Vector2f(142, 192)); // Taille du rectangle
+    cartep4.setPosition(1081, 400); // Position du rectangle
+    cartep4.setFillColor(sf::Color::White); // Couleur du rectangle
+
+    sf::RectangleShape cartep5;
+    cartep5.setSize(sf::Vector2f(142, 192)); // Taille du rectangle
+    cartep5.setPosition(1273, 400); // Position du rectangle
+    cartep5.setFillColor(sf::Color::White); // Couleur du rectangle
+
+
+
+    visualproposition_.push_back(cartep1);
+    visualproposition_.push_back(cartep2);
+    visualproposition_.push_back(cartep3);
+    visualproposition_.push_back(cartep4);
+    visualproposition_.push_back(cartep5);
+
+
+}
+void visual::setvisualJeu_() {
+    // Cr ation des cartes du jeu(forme recatangulaire)
+    sf::RectangleShape cartej1;
+    cartej1.setSize(sf::Vector2f(106.5, 144)); // Taille du rectangle
+    cartej1.setPosition(430, 770); // Position du rectangle
+    cartej1.setFillColor(sf::Color::White); // Couleur du rectangle
+
+    sf::RectangleShape cartej2;
+    cartej2.setSize(sf::Vector2f(106.5, 144)); // Taille du rectangle
+    cartej2.setPosition(567, 770); // Position du rectangle
+    cartej2.setFillColor(sf::Color::White); // Couleur du rectangle
+
+    sf::RectangleShape cartej3;
+    cartej3.setSize(sf::Vector2f(106.5, 144)); // Taille du rectangle
+    cartej3.setPosition(704, 770); // Position du rectangle
+    cartej3.setFillColor(sf::Color::White); // Couleur du rectangle
+
+    sf::RectangleShape cartej4;
+    cartej4.setSize(sf::Vector2f(106.5, 144)); // Taille du rectangle
+    cartej4.setPosition(841, 770); // Position du rectangle
+    cartej4.setFillColor(sf::Color::White); // Couleur du rectangle
+
+    sf::RectangleShape cartej5;
+    cartej5.setSize(sf::Vector2f(106.5, 144)); // Taille du rectangle
+    cartej5.setPosition(978, 770); // Position du rectangle
+    cartej5.setFillColor(sf::Color::White); // Couleur du rectangle
+
+    sf::RectangleShape cartej6;
+    cartej6.setSize(sf::Vector2f(106.5, 144)); // Taille du rectangle
+    cartej6.setPosition(1115, 770); // Position du rectangle
+    cartej6.setFillColor(sf::Color::White); // Couleur du rectangle
+
+    sf::RectangleShape cartej7;
+    cartej7.setSize(sf::Vector2f(106.5, 144)); // Taille du rectangle
+    cartej7.setPosition(1252, 770); // Position du rectangle
+    cartej7.setFillColor(sf::Color::White); // Couleur du rectangle
+
+    sf::RectangleShape cartej8;
+    cartej8.setSize(sf::Vector2f(106.5, 144)); // Taille du rectangle
+    cartej8.setPosition(1389, 770); // Position du rectangle
+    cartej8.setFillColor(sf::Color::White); // Couleur du rectangle
+
+    visualjeu_.push_back(cartej1);
+    visualjeu_.push_back(cartej2);
+    visualjeu_.push_back(cartej3);
+    visualjeu_.push_back(cartej4);
+    visualjeu_.push_back(cartej5);
+    visualjeu_.push_back(cartej6);
+    visualjeu_.push_back(cartej7);
+    visualjeu_.push_back(cartej8);
+    
+}
+int visual::afficherProposition(Proposition prop) {
+    for (int i = 0; i < 5; i++) {
+
+        Texture carte;
+        if (!carte.loadFromFile("cartes/" + to_string(prop.getProposition()[i].getValeur()) + "," + prop.getProposition()[i].getCouleur() + ".png")) {
+            // G rer l' chec du chargement de l'image
+            return 1;
+        }
+        Sprite sprite(carte);
+        Vector2f position = (visualjeu_[i]).getPosition();
+        sprite.setPosition(position.x, position.y);
+    }
+    return 0;
+
+}
+
+int visual::afficherJeu(Jeu jeu) {
+    for (int i = 0; i < 8; i++) {
+
+        Texture carte;
+        if (!carte.loadFromFile("cartes/" + to_string(jeu.getJeu()[i].getValeur()) + "," + jeu.getJeu()[i].getCouleur() + ".png")) {
+            // G rer l' chec du chargement de l'image
+            return 1;
+        }
+        Sprite sprite(carte);
+        Vector2f position = (visualjeu_[i]).getPosition();
+        sprite.setPosition(position.x, position.y);
+    }
+    return 0;
+
+}

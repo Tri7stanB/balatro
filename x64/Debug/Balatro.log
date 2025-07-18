@@ -1,0 +1,13 @@
+﻿  partie.cpp
+C:\Users\trist\OneDrive\Bureau\FISE1\Semestre 6\Balatro\partie.cpp(166,32): warning C4267: 'initialisation' : conversion de 'size_t' en 'int', perte possible de données
+C:\Users\trist\OneDrive\Bureau\FISE1\Semestre 6\Balatro\partie.cpp(218,95): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+C:\Users\trist\OneDrive\Bureau\FISE1\Semestre 6\Balatro\partie.cpp(218,74): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
+          with
+          [
+              T=float
+          ]
+  Balatro.vcxproj -> C:\Users\trist\OneDrive\Bureau\FISE1\Semestre 6\Balatro\x64\Debug\Balatro.exe

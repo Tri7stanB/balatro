@@ -1,0 +1,8 @@
+﻿  jeu.cpp
+C:\Users\trist\OneDrive\Bureau\FISE1\Semestre 6\Balatro\visual.h(5,10): fatal  error C1083: Impossible d'ouvrir le fichier include : 'SFML/Graphics.hpp' : No such file or directory
+  partie.cpp
+C:\Users\trist\OneDrive\Bureau\FISE1\Semestre 6\Balatro\visual.h(5,10): fatal  error C1083: Impossible d'ouvrir le fichier include : 'SFML/Graphics.hpp' : No such file or directory
+  proposition.cpp
+C:\Users\trist\OneDrive\Bureau\FISE1\Semestre 6\Balatro\proposition.cpp(6,10): fatal  error C1083: Impossible d'ouvrir le fichier include : 'SFML/Graphics.hpp' : No such file or directory
+  visual.cpp
+C:\Users\trist\OneDrive\Bureau\FISE1\Semestre 6\Balatro\visual.cpp(6,10): fatal  error C1083: Impossible d'ouvrir le fichier include : 'SFML/Graphics.hpp' : No such file or directory
